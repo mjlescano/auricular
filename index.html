@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Auricular | Proximamente</title>
+  <title>Auricular</title>
   <style type="text/css">
     html,
     body {
+      position: relative;
       margin: 0;
       padding: 0;
       min-height: 100%;
+      height: 100%;
     }
 
     @font-face {
@@ -30,11 +32,11 @@
       background-size: cover;
     }
 
-    div {
-      position: absolute;
-      top: 45%;
-      left: 0;
-      width: 100%;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
     }
 
     h1 {
@@ -44,6 +46,7 @@
       color: white;
       text-transform: uppercase;
       text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+      cursor: default;
     }
 
     p {
@@ -52,22 +55,52 @@
       color: white;
       text-transform: uppercase;
       text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
+      margin: 0 0 40px;
     }
 
     p a {
       color: white;
       text-decoration: none;
     }
+
+    p a:hover {
+      opacity: .8;
+    }
+
+    .video {
+      position: relative;
+      margin: 0 auto;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .video span {
+      display: block;
+      padding-top: 56%;
+    }
+
+    .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
-  <div>
-    <h1>Auricular</h1>
-    <p>
-      <a href="https://www.facebook.com/musica.auricular" title="en Facebook" target="_blank">Facebook</a>
-      <span>&nbsp;&nbsp;</span>
-      <a href="http://auricular.bandcamp.com/releases" title="en Bandcamp" target="_blank">Bandcamp</a>
-    </p>
-  </div>
+    <div class="wrapper">
+      <h1>Auricular</h1>
+      <p>
+        <a href="https://www.facebook.com/musica.auricular" title="en Facebook" target="_blank">Facebook</a>
+        <span>&nbsp;&nbsp;</span>
+        <a href="http://auricular.bandcamp.com/releases" title="en Bandcamp" target="_blank">Bandcamp</a>
+      </p>
+
+      <div class="video">
+        <span></span>
+        <iframe src="//www.youtube.com/embed/Vp_PVngwydg?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
 </body>
 </html>
